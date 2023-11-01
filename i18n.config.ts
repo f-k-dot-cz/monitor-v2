@@ -1,11 +1,13 @@
 import * as en from "./locales/en.json";
-import * as fr from "./locales/fr.json";
+import * as de from "./locales/de.json";
+import * as cz from "./locales/cz.json";
 
 export default defineI18nConfig(() => ({
   legacy: false,
-  locale: "en",
+  locale: "cz",
   messages: {
+    cz: cz,
     en: en,
-    fr: fr,
+    de: de,
   },
 }));

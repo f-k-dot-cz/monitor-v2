@@ -1,3 +1,28 @@
 {
-  "welcome": "Welcome"
+  "measure": {
+    "last": "Last measurement: {lastMeasure} / Last page update: {lastPageUpdate}",
+    "weather": "Weather: {weather} / Feel temperature: {weatherTemp} / Rain amount last hour: {weatherRain} / Snow amount last hour: {weatherSnow}",
+    "temperature": "Temperature progress (inner / outer) - {temperatureGraphDateRange}"
+  },
+  "graph": {
+    "hint": "The chart can be zoomed in by dragging and dropping - kind of like selecting multiple fields in excel. You can zoom out by pressing the house button. The chart image, CSV, etc. can be downloaded via the tri-colon (burger). There is then a tabular output of the data below the chart. In the drop down list above the chart zoom control it is possible to view the values by week with 2h averages.",
+    "sunlightHint": "shows the calculated values for the intensity of sunlight across the day - from dawn to dusk. The maximum values show absolute clarity, the thicker line shows the values with clouds/fog taken into account."
+  },
+  "common": {
+    "inner": "Inner",
+    "outer": "Outer",
+    "average": "average",
+    "temperature": "temperature",
+    "humidity": "humidity",
+    "snow": "snow",
+    "rain": "rain",
+    "fog": "fog",
+    "limit": "limit",
+    "sunlight": "Sun light",
+    "date": "Date",
+    "time": "Time",
+    "source": "Source",
+    "sensor": "Sensor",
+    "api": "API"
+  }
 }

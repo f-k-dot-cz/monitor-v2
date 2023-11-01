@@ -1,3 +1,7 @@
 <template>
-  <div class="main">MAIN</div>
+  <div class="main">
+    MAIN
+
+    <Temperature />
+  </div>
 </template>

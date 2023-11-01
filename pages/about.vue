@@ -2,15 +2,16 @@
   <div class="wrap">
     <form>
       <select v-model="locale">
+        <option value="cz">cz</option>
         <option value="en">en</option>
-        <option value="fr">fr</option>
+        <option value="de">de</option>
       </select>
       <p>{{ $t("welcome") }}</p>
     </form>
 
-    <div class="test">Test page {{ $t("welcome") }}</div>
+    <div class="test">Test page {{ $t("common.outer") }}</div>
 
-    <div class="dalsi">Nic</div>
+    <div class="dalsi"><Temperature /></div>
   </div>
 </template>
 

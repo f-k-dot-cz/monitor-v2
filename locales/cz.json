@@ -1,0 +1,28 @@
+{
+  "measure": {
+    "last": "Poslední měření: {lastMeasure} / Poslední automatická aktualizace stránky: {lastPageUpdate}",
+    "weather": "Počasí: {weather} / Pocitová teplota: {weatherTemp} / Déšť poslední 1h: {weatherRain} / Sníh poslední 1h: {weatherSnow}",
+    "temperature": "Průběh teploty (vnitřní / venkovní) - {temperatureGraphDateRange}"
+  },
+  "graph": {
+    "hint": "Graf lze přiblížit přetažením myší a táhnutím - něco jako výběr více polí v excelu. Oddálit lze stisknutím domečku. Přes trojčárku (burger) lze stáhnout obrázek grafu, CSV, apod. Pod tímhle grafem je pak tabulkový výstup dat. V rozbalovací seznamu nad ovládáním zoomu grafu je možné zobrazit hodnoty po týdnech s 2h průměry.",
+    "sunlightHint": "zobrazuje vypočtené hodnoty pro intenzitu slunečního svitu napříč dnem - od úsvitu do soumraku. Max. hodnoty zobrazují absolutní jasno, tlustší čarou pak hodnoty se zohledněním oblačnosti / mlhy."
+  },
+  "common": {
+    "inner": "Vnitřní",
+    "outer": "Venkovní",
+    "average": "průměr",
+    "temperature": "teplota",
+    "humidity": "vlhkost",
+    "snow": "sníh",
+    "rain": "déšť",
+    "fog": "mlha",
+    "limit": "limit",
+    "sunlight": "Sluneční svit",
+    "date": "Datum",
+    "time": "Čas",
+    "source": "Zdroj",
+    "sensor": "Senzor",
+    "api": "API"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "measure": {
+    "last": "Letzte Messung: {lastMeasure} / Letzte Seitenaktualisierung: {lastPageUpdate}",
+    "weather": "Das Wetter: {weather} / Gefühlte Temperatur: {weatherTemp} / Regenmenge letzte Stunde: {weatherRain} / Schneemenge der letzten Stunde: {weatherSnow}",
+    "temperature": "Temperaturverlauf (inner / outer) - {temperatureGraphDateRange}"
+  },
+  "graph": {
+    "hint": "Das Diagramm kann durch Ziehen und Ablegen vergrößert werden - ähnlich wie bei der Auswahl mehrerer Felder in Excel. Sie können es durch Drücken der Haus-Taste verkleinern. Das Bild des Diagramms, die CSV-Datei usw. kann über das Dreieck (burger) heruntergeladen werden. Unterhalb des Diagramms befindet sich eine tabellarische Ausgabe der Daten. In der Dropdown-Liste oberhalb des Diagramms kann man sich die Werte nach Wochen mit 2-Stunden-Durchschnittswerten anzeigen lassen.",
+    "sunlightHint": "zeigt die berechneten Werte für die Intensität des Sonnenlichts im Tagesverlauf - von der Morgendämmerung bis zur Abenddämmerung. Die Maximalwerte zeigen die absolute Klarheit, die dickere Linie zeigt die Werte unter Berücksichtigung von Wolken/Nebel."
+  },
+  "common": {
+    "inner": "Inneres",
+    "outer": "Äußeres",
+    "average": "durchschnitt",
+    "temperature": "temperatur",
+    "humidity": "feuchtigkeit",
+    "snow": "schnee",
+    "rain": "regen",
+    "fog": "nebel",
+    "limit": "limit",
+    "sunlight": "Sonnenlicht",
+    "date": "Datum",
+    "time": "Zeit",
+    "source": "Quelle",
+    "sensor": "Sensor",
+    "api": "API"
+  }
+}
