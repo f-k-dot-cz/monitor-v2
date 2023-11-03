@@ -6,8 +6,8 @@ export default defineI18nConfig(() => ({
   legacy: false,
   locale: "cz",
   messages: {
-    cz: cz,
-    en: en,
-    de: de,
+    cz,
+    en,
+    de,
   },
 }));
