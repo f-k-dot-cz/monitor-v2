@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Measurement;
+namespace App\Modules\Measurement\Exceptions;
 
-use App\Domain\DomainException\DomainRecordNotFoundException;
+use App\Application\Exceptions\DomainRecordNotFoundException;
 
 class MeasurementNotFoundException extends DomainRecordNotFoundException
 {

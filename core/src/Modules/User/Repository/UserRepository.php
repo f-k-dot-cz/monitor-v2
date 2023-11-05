@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\User;
+namespace App\Modules\User\Repository;
+
+use App\Modules\User\User;
 
 interface UserRepository
 {

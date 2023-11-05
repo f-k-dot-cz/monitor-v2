@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Application\Actions\Measurement;
+namespace App\Modules\Measurement\Actions;
 
 use App\Application\Actions\Action;
-use App\Domain\Measurement\MeasurementRepository;
+use App\Modules\Measurement\Repository\MeasurementRepository;
 use Psr\Log\LoggerInterface;
 
 abstract class MeasurementAction extends Action

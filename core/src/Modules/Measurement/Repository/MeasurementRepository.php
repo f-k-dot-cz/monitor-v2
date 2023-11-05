@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Measurement;
+namespace App\Modules\Measurement\Repository;
+
+use App\Modules\Measurement\Measurement;
 
 interface MeasurementRepository
 {

@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Application\Actions\User\ListUsersAction;
-use App\Application\Actions\User\ViewUserAction;
-use App\Application\Actions\Measurement\ListMeasurementAction;
+use App\Modules\User\Actions\{ListUsersAction, ViewUserAction};
+use App\Modules\Measurement\Actions\ListMeasurementAction;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\App;
@@ -26,9 +25,20 @@ return function (App $app) {
         $group->get('/{id}', ViewUserAction::class);
     });
 
-
     $app->group('/measurements', function (Group $group) {
         $group->get('', ListMeasurementAction::class);
     });
+
+    /* foreach($appendRoutes as $route) {
+         if(!count($route['paths']) || !$route['path']) {
+             continue;
+         }
+
+         $app->group($route['path'], function (Group $group) use ($route) {
+             foreach($route['paths'] as $routeSubpath) {
+                 $group->get($routeSubpath['endpoint'], $routeSubpath['actionClass']);
+             }
+         });
+     }*/
 
 };

@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Application\Actions\User;
+namespace App\Modules\User\Actions;
 
 use Psr\Http\Message\ResponseInterface as Response;
 
+#[Route('/users')]
 class ListUsersAction extends UserAction
 {
     /**

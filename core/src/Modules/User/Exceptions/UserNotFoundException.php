@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\User;
+namespace App\Modules\User\Exceptions;
 
-use App\Domain\DomainException\DomainRecordNotFoundException;
+use App\Application\Exceptions\DomainRecordNotFoundException;
 
 class UserNotFoundException extends DomainRecordNotFoundException
 {

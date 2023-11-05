@@ -30,6 +30,7 @@ onMounted(() => {
   console.log("Fetching from api delay");
   api.init().then(() => {
     api.get("measurements");
+    api.get("users");
   });
 });
 </script>

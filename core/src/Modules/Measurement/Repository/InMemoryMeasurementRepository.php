@@ -2,25 +2,27 @@
 
 declare(strict_types=1);
 
-namespace App\Infrastructure\Persistence\Measurement;
+namespace App\Modules\Measurement\Repository;
 
-use App\Domain\Measurement\Measurement;
-use App\Domain\Measurement\MeasurementNotFoundException;
-use App\Domain\Measurement\MeasurementRepository;
+//MODULE/Wire(MeasurementRepository)
+
+use App\Modules\Measurement\Measurement;
+use App\Modules\Measurement\Exceptions\MeasurementNotFoundException;
+use App\Modules\Measurement\Repository\MeasurementRepository;
 
 class InMemoryMeasurementRepository implements MeasurementRepository
 {
     /**
-     * @var User[]
+     * @var Measurement[]
      */
-    private array $users;
+    private array $measurements;
 
     /**
-     * @param User[]|null $users
+     * @param Measurement[]|null $measurements
      */
-    public function __construct(array $users = null)
+    public function __construct(array $measurements = null)
     {
-        $this->users = $users ?? [
+        $this->measurements = $measurements ?? [
             1 => new Measurement(1, [1,2,3,4]),
             2 => new Measurement(2, [4,5,6,7])
         ];
