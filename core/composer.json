@@ -24,6 +24,7 @@
   "require": {
     "php": "^7.4 || ^8.0",
     "ext-json": "*",
+    "codedungeon/php-cli-colors": "^1.12",
     "monolog/monolog": "^2.8",
     "php-di/php-di": "^6.4",
     "slim/psr7": "^1.5",
@@ -56,7 +57,7 @@
   },
   "scripts": {
     "start": "php -S localhost:8080 -t public",
-    "modules:reload": "php app/modules/reload.php",
+    "modules:reload": "php app/modules/load.php",
     "modules:create": "php app/modules/create.php",
     "test": "phpunit"
   }

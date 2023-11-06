@@ -2,6 +2,15 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . '/../../vendor/codedungeon/php-cli-colors/src/Color.php';
+
+use Codedungeon\PHPCliColors\Color;
+
+function cl($color, $txt)
+{
+    echo $color, $txt, Color::RESET, PHP_EOL;
+}
+
 function rscandir($dir)
 {
     $result = [];
@@ -23,14 +32,16 @@ $origDir = __DIR__ . '/../../src/Modules';
 $wireDefinitions = [];
 $modulesPaths = [];
 
+cl(Color::GREEN, 'Scanning directory...');
+
 foreach(rscandir($origDir) as $fileToProcess) {
     $checkClassName = "App\\Modules" . str_replace([$origDir, ".php"], "", $fileToProcess);
 
     $fil = str_replace('<?' . 'php', '', file_get_contents($fileToProcess, false, null, 0, 512));
-    var_dump($fil);
     $toWire = null;
     if(preg_match('/MODULE\/Wire\(([^\)]+)\)/i', $fil, $wireList)) {
         $toWire = $wireList[1];
+        cl(Color::CYAN, 'Module wire definition found for ' . $checkClassName . ':class');
     }
 
     $namespace = '';
@@ -40,6 +51,7 @@ foreach(rscandir($origDir) as $fileToProcess) {
 
     if(preg_match('/#\[Route\([^\)]+\)\]/', $fil)) {
         $modulesPaths[] = $checkClassName . "::class";
+        cl(Color::CYAN, 'Route attribute found for ' . $checkClassName . ':class');
     }
 
     if($toWire) {
@@ -55,8 +67,7 @@ if($wireDefinitions) {
 $wiredData .= "\n];";
 
 $wired = file_put_contents($wiredDataPath, $wiredData);
-echo $wired ? 'Modules repositories autowired' : 'Modules repositories wiring failed';
-echo "\n";
+echo $wired ? cl(Color::GREEN, 'Modules repositories prepared for autowire') : cl(Color::RED, 'Modules repositories wiring preparation failed');
 
 $modulesDataPath = __DIR__ . '/cache/paths.php';
 $modulesData = '<?' . 'php' . "\n\nreturn [\n";
@@ -64,5 +75,5 @@ $modulesData .= implode(",\n", $modulesPaths);
 $modulesData .= "\n];";
 
 $pathed = file_put_contents($modulesDataPath, $modulesData);
-echo $pathed ? 'Modules paths fetched' : 'Modules paths fetch failed';
+echo $pathed ? cl(Color::GREEN, 'Modules actions routes fetched') : cl(Color::RED, 'Modules actions routes fetch failed');
 echo "\n";
