@@ -12,6 +12,10 @@ use Slim\Factory\ServerRequestCreatorFactory;
 
 require __DIR__ . '/../vendor/autoload.php';
 
+define('ROOT_PATH', __DIR__ . '/../');
+define('APPLICATION_PATH', ROOT_PATH . 'src/Application');
+define('MODULES_CACHE_PATH', ROOT_PATH . 'app/modules/cache');
+
 // Instantiate PHP-DI ContainerBuilder
 $containerBuilder = new ContainerBuilder();
 

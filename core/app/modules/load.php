@@ -26,7 +26,7 @@ $modulesPaths = [];
 foreach(rscandir($origDir) as $fileToProcess) {
     $checkClassName = "App\\Modules" . str_replace([$origDir, ".php"], "", $fileToProcess);
 
-    $fil = str_replace('<?' . 'php', '', file_get_contents($fileToProcess, false, null, 0, 256));
+    $fil = str_replace('<?' . 'php', '', file_get_contents($fileToProcess, false, null, 0, 512));
     var_dump($fil);
     $toWire = null;
     if(preg_match('/MODULE\/Wire\(([^\)]+)\)/i', $fil, $wireList)) {
@@ -60,7 +60,7 @@ echo "\n";
 
 $modulesDataPath = __DIR__ . '/cache/paths.php';
 $modulesData = '<?' . 'php' . "\n\nreturn [\n";
-$modulesData .= implode("\n", $modulesPaths);
+$modulesData .= implode(",\n", $modulesPaths);
 $modulesData .= "\n];";
 
 $pathed = file_put_contents($modulesDataPath, $modulesData);

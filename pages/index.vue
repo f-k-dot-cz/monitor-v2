@@ -31,6 +31,7 @@ onMounted(() => {
   api.init().then(() => {
     api.get("measurements");
     api.get("users");
+    api.get("users/1");
   });
 });
 </script>

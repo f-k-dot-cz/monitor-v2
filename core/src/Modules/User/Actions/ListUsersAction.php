@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Modules\User\Actions;
 
+use App\Application\Attributes\Route as Route;
+
 use Psr\Http\Message\ResponseInterface as Response;
 
 #[Route('/users')]
